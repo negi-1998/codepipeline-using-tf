@@ -26,7 +26,7 @@ module "codebuild" {
   source = "./modules/codebuild"
   service_role_arn = module.iam.codebuild_role_arn
   artifact_location = module.s3.artifact_bucket_name
-  source_location = "https://github.com/negi-1998/aws-devops-zero-to-hero.git"
+  source_location = ""  #link to the github repo
   buildspec = "buildspec.yml"
   name = "MyCodeBuildProject"
 }
